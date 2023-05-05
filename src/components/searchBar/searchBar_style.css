@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#search {
+    display: flex;
+    height: 40px;
+    width: fit-content;
+    /* border: 1px red solid; */
+}
+
+input {
+    width: 250px;
+    border-radius: 30px;
+    padding: 0 10px;
+    outline: none;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#search img {
+    height: 20px;
+}
