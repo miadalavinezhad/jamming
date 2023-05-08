@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+#playList {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-height: 500px;
+    background-color: #252525;
+    margin: 5px;
+}
+
+#playList-name {
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 0px 2px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    width: 80%;
+    text-align: center;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+#playList #submit {
+    cursor: pointer;
+    border: none;
+    width: 80%;
+    background-color: #1DB954;
+    color: #fff;
+}
+
+#playList input {
+    border-radius: 0;
+    margin: 10px auto;
+    height: 40px;
+}

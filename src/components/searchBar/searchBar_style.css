@@ -11,14 +11,14 @@
     /* border: 1px red solid; */
 }
 
-input {
+#search input {
     width: 250px;
     border-radius: 30px;
     padding: 0 10px;
     outline: none;
 }
 
-button {
+#search button {
     height: 40px;
     width: 40px;
     border-radius: 50%;

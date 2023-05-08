@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#results {
+    border: 2px solid lightblue;
+    width: fit-content;
+    padding: 15px 10px;
+    background-color: #394867;
+    max-height: 500px;
+    overflow-y: hidden;
+}
+
+#results:hover {
+    overflow-y: auto;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
