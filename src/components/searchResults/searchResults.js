@@ -2,7 +2,7 @@ import React from 'react';
 import Track from '../track/track';
 import { useState } from 'react';
 
-const initial_results = [
+const searchResults = [
     {
         name:'Gole Yakh',
         artist:'Kourosh',
@@ -16,67 +16,50 @@ const initial_results = [
         id:2
     },
     {
-        name:'Magic',
+        name:'O',
         artist:'coldplay',
         album:'ghost stories',
         id:3
     },
     {
-        name:'Magic',
+        name:'Midnight',
         artist:'coldplay',
         album:'ghost stories',
         id:4
     },
     {
-        name:'Magic',
+        name:'Everglow',
         artist:'coldplay',
         album:'ghost stories',
         id:5
     },
     {
-        name:'Magic',
+        name:'Paradise',
         artist:'coldplay',
         album:'ghost stories',
         id:6
     }
 ];
 
-function SearchResults()
-{
-    const [results, setResults] = useState(initial_results);
-    const [result_playList, setResult_playList] = useState([]);
+/// not used ///
+// function SearchResults()
+// {
+//     const [results, setResults] = useState(initial_results);
+    
+//     let resultArr = (
+//         results.map(song => <li key={song.id}>
+//                                 <Track 
+//                                 name={song.name} 
+//                                 artist={song.artist} 
+//                                 album={song.album} 
+//                                 onClick={() => 
+//                                 {
+//                                     setResults(results.filter(result => result.id !== song.id));
+//                                 }} />
+//                             </li>)
+//     );
 
-    let resultArr = (
-        results.map(song => <li key={song.id}>
-                                <Track 
-                                name={song.name} 
-                                artist={song.artist} 
-                                album={song.album} 
-                                onClick={() => 
-                                {
-                                    setResults(results.filter(result => result.id !== song.id));
-                                    setResult_playList([...result_playList, song]);
-                                }} />
-                            </li>)
-    );
-    console.log(resultArr);
+//     return resultArr;
+// }
 
-    let resultArr_playList = (
-        result_playList.map(song => <li key={song.id}>
-                                <Track 
-                                name={song.name} 
-                                artist={song.artist} 
-                                album={song.album} 
-                                onClick={() => 
-                                {
-                                    setResult_playList(results.filter(result => result.id !== song.id));
-                                    setResults([...results, song])
-                                }} />
-                            </li>)
-    );
-
-
-    return [<ul>{resultArr}</ul>, <ul>{resultArr_playList}</ul>];
-}
-
-export default SearchResults;
+export default searchResults;
