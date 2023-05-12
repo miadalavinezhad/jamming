@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './trackList_style.css';
 import searchResults from '../searchResults/searchResults';
 import Track from '../track/track';
+import SearchBar from '../searchBar/searchBar';
 
 function TrackList({ songs, onClick })
 {       
@@ -16,7 +17,7 @@ function TrackList({ songs, onClick })
                         name={song.name}
                         album={song.album}
                         artist={song.artist}
-                        onClick={() => onClick(song)}
+                        onClick={(e) => onClick(e, song)} // Passing argument to event handler
                         />
                     </li>
         })
@@ -24,7 +25,7 @@ function TrackList({ songs, onClick })
 
     return (
         <div id='results'>
-            <h2>Songs</h2>
+            <SearchBar />
             <ul>{ tracks }</ul>
         </div>
     );

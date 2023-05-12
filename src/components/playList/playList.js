@@ -15,7 +15,7 @@ function PlayList({ songs, onClick })
                         name={song.name}
                         album={song.album}
                         artist={song.artist}
-                        onClick={() => onClick(song)}
+                        onClick={(e) => onClick(e, song)}
                         />
                     </li>
         })

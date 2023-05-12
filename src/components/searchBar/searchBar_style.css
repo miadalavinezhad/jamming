@@ -6,25 +6,36 @@
 
 #search {
     display: flex;
-    height: 40px;
-    width: fit-content;
-    /* border: 1px red solid; */
+    justify-content: space-between;
+    height: 45px;
+    width: 325px;
+    margin: 15px 0px;
 }
 
 #search input {
+    border: none;
+    border-bottom: 1px solid gray;
     width: 250px;
-    border-radius: 30px;
-    padding: 0 10px;
-    outline: none;
+    min-height: 45px;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
 }
 
 #search button {
+    position: relative;
+    top: 5px;
+    right: 10px;
     height: 40px;
     width: 40px;
+    border: 1px solid gray;
     border-radius: 50%;
     margin-left: 5px;
+    background-color: #000;
 }
 
 #search img {
     height: 20px;
+    filter: invert(1);
 }

@@ -8,21 +8,32 @@
 #playList {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 350px;
+    height: 500px;
     max-height: 500px;
-    background-color: #252525;
-    margin: 5px;
+    background-color: #000;
+    margin: 0 10px;
+    padding: 15px 10px;
+    border: 2px solid #6e6d6d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#playList:hover {
+    overflow-y: auto;
 }
 
 #playList-name {
     border: none;
     border-bottom: 1px solid gray;
-    padding: 0px 2px;
+    padding: 0px 5px;
     font-size: 16px;
     color: #fff;
     background: transparent;
-    width: 80%;
-    text-align: center;
+    width: 220px;
+    margin: 15px 0px;
+    min-height: 45px;
+    /* text-align: center; */
 }
 
 ::placeholder {
@@ -32,13 +43,10 @@
 #playList #submit {
     cursor: pointer;
     border: none;
-    width: 80%;
+    width: 100%;
+    min-height: 45px;
     background-color: #1DB954;
+    border-radius: 10px;
     color: #fff;
-}
-
-#playList input {
-    border-radius: 0;
-    margin: 10px auto;
-    height: 40px;
+    font-size: 16px;
 }

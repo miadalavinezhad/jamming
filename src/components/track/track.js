@@ -9,12 +9,12 @@ function Track(props)
     // Event handlers
     function handleMouseEnter(event)
     {
-        event.target.style.backgroundColor = '#fff';
+        event.target.style.backgroundColor = '#252525';
     }
 
     function handleMouseLeave(event)
     {
-        event.target.style.backgroundColor = '#212a3e';
+        event.target.style.backgroundColor = '#000';
     }
 
 

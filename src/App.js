@@ -1,28 +1,30 @@
-import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import SearchBar from './components/searchBar/searchBar';
-import Track from './components/track/track';
-import SearchResults from './components/searchResults/searchResults';
 import TrackList from './components/trackList/trackList';
 import PlayList from './components/playList/playList'
 import searchResults from './components/searchResults/searchResults';
+import './App.css';
 
 
 function App() 
 {
+  // States for saving songs to be displayed on tracklist and playlist
   const [TL, setTL] = useState(searchResults);
   const [PL, setPL] = useState([]);
 
-  function handleClickTL(song)
+  // Remove clicked song from tracklist and add to playlist
+  function handleClickTL(e, song)
   {
-      console.log(song);
+      console.log(e.target.src);
       setTL(TL.filter(s => s.id !== song.id));
       setPL([...PL, song]);
   }
 
-  function handleClickPL(song)
+  // Remove song from playlist and add to tracklist
+  function handleClickPL(e, song)
   {
+      console.log(e.target.src);
       setPL(PL.filter(s => s.id !== song.id));
       setTL([...TL, song]);
   }
@@ -30,9 +32,11 @@ function App()
 
   return (
     <div className='App'>
-      <SearchBar className='searchBar' />
-      <TrackList songs={TL} onClick={handleClickTL} />
-      <PlayList songs={PL} onClick={handleClickPL} />
+      <div className='search-result'>
+        {/* <SearchBar className="SearchBar" /> */}
+        <TrackList className='tracklist' songs={TL} onClick={handleClickTL} />
+      </div>
+        <PlayList songs={PL} onClick={handleClickPL} />
     </div>
   );
 }
